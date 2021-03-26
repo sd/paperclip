@@ -13,4 +13,5 @@ group :development, :test do
   gem 'builder'
   gem 'rubocop', require: false
   gem 'rspec'
+  gem 'marcel', '1.0.0'
 end

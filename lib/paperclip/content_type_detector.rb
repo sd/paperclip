@@ -60,11 +60,17 @@ module Paperclip
     end
 
     def type_from_file_contents
-      type_from_file_command
+      type_from_marcel || type_from_file_command
     rescue Errno::ENOENT => e
       Paperclip.log("Error while determining content type: #{e}")
       SENSIBLE_DEFAULT
     end
+
+    def type_from_marcel
+    @type_from_marcel ||= File.open(@filepath) do |file|
+      Marcel::MimeType.for(file)
+    end
+  end
 
     def type_from_file_command
       @type_from_file_command ||=
