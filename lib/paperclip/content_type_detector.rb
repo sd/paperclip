@@ -1,3 +1,5 @@
+require "marcel"
+
 module Paperclip
   class ContentTypeDetector
     # The content-type detection strategy is as follows:
