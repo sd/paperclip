@@ -4,6 +4,7 @@ gemspec
 
 gem 'sqlite3', '~> 1.3.8', :platforms => :ruby
 gem 'pry'
+gem 'marcel', '1.0.0'
 
 # Hinting at development dependencies
 # Prevents bundler from taking a long-time to resolve
@@ -13,5 +14,5 @@ group :development, :test do
   gem 'builder'
   gem 'rubocop', require: false
   gem 'rspec'
-  gem 'marcel', '1.0.0'
+
 end
