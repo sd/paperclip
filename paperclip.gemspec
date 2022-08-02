@@ -20,11 +20,12 @@ Gem::Specification.new do |s|
   s.post_install_message = File.read("UPGRADING") if File.exist?("UPGRADING")
 
   s.requirements << "ImageMagick"
-  s.required_ruby_version = ">= 2.2.0"
+  s.required_ruby_version = ">= 2.3.0"
 
   s.add_dependency("activemodel", ">= 4.2.0")
   s.add_dependency("activesupport", ">= 4.2.0")
   s.add_dependency("mime-types")
+  s.add_dependency("marcel", "~> 1.0.1")
   s.add_dependency("terrapin", "~> 0.6.0")
 
   s.add_development_dependency("activerecord", ">= 4.2.0")

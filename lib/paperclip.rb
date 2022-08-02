@@ -64,8 +64,9 @@ rescue LoadError
   require "mime/types"
 end
 
-require 'logger'
-require 'terrapin'
+require "marcel"
+require "logger"
+require "terrapin"
 
 require "paperclip/railtie" if defined?(Rails::Railtie)
 
